@@ -32,33 +32,35 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+NSG Allowed Inbound Malicious Flows![nsg allowed in BEFORE](https://github.com/LucasWhetsel/Azure-Honeynet/assets/175179611/83525034-3279-4080-a64c-fa816ab1cf33)
+<br>
+Linux Syslog Auth Failures![Linux BEFORE](https://github.com/LucasWhetsel/Azure-Honeynet/assets/175179611/fe6dd28a-7a1c-4028-a32a-8a78c3805166)<br>
+Windows RDP/SMB Auth Failures![Windows auth fail BEFORE](https://github.com/LucasWhetsel/Azure-Honeynet/assets/175179611/cbd9a086-21e7-4b11-bb4d-b1eaec3fa900)
+<br>
 
 ## Metrics Before Hardening / Security Controls
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+Start Time 2024-04-08 13:32:30
+Stop Time 2024-04-09 13:32:30
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 31955
+| Syslog                   | 3743
+| SecurityAlert            | 4
+| SecurityIncident         | 318
+| AzureNetworkAnalytics_CL | 2390
 
-## Attack Maps Before Hardening / Security Controls
+## Attack Maps After Hardening / Security Controls
 
 ```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+Start Time 2024-04-18 15:37
+Stop Time	2024-04-19 15:37
 
 | Metric                   | Count
 | ------------------------ | -----
